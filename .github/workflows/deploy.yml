@@ -16,6 +16,12 @@ jobs:
 
           workspace: gh-actions-demo
 
+          # The directory that is uploaded to Terraform Cloud/Enterprise, defaults
+          # to the repository root. Respsects .terraformignore. Note: this is
+          # prefixed to the "Terraform Working Directory" in the remote workspace
+          # settings.
+          directory: .deploy/terraform/static-website/
+
           message: |
             Run triggered using gh-actions-demo (commit: ${{ github.SHA }})
         id: gh-actions-demo
