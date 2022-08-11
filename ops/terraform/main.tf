@@ -12,6 +12,6 @@ provider "aws" {
 }
 
 module "website" {
-  source      = "./.deploy/terraform/static-site"
+  source      = "./static-site"
   domain_name = "pedrogglima.com.br"
 }
