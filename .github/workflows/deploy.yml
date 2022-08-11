@@ -1,0 +1,28 @@
+name: Deploy Infrastructure
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  tf_fmt:
+    name: Deploy Site
+    runs-on: ubuntu-latest
+    steps:
+      - uses: kvrhdn/tfe-run@v1
+        with:
+          token: ${{ secrets.TF_API_TOKEN }}
+
+          workspace: gh-actions-demo
+
+          message: |
+            Run triggered using gh-actions-demo (commit: ${{ github.SHA }})
+
+          tf-vars: |
+            aws_region  = "us-east-1"
+            domain_name = "pedrogglima"
+
+          # Note: this is prefixed to the "Terraform Working Directory" in the remote workspace settings.
+          directory: ./ops/terraform/
+        id: gh-actions-demo
