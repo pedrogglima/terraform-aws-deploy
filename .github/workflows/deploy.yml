@@ -19,10 +19,6 @@ jobs:
           message: |
             Run triggered using gh-actions-demo (commit: ${{ github.SHA }})
 
-          tf-vars: |
-            aws_region  = "us-east-1"
-            domain_name = "pedrogglima"
-
           # Note: this is prefixed to the "Terraform Working Directory" in the remote workspace settings.
           directory: ./ops/terraform/
         id: gh-actions-demo
