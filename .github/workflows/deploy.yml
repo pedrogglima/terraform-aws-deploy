@@ -20,7 +20,7 @@ jobs:
           # to the repository root. Respsects .terraformignore. Note: this is
           # prefixed to the "Terraform Working Directory" in the remote workspace
           # settings.
-          directory: .deploy/terraform/static-site/
+          directory: ./.deploy/terraform/static-site/
 
           message: |
             Run triggered using gh-actions-demo (commit: ${{ github.SHA }})
