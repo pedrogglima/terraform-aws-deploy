@@ -18,7 +18,4 @@ jobs:
 
           message: |
             Run triggered using gh-actions-demo (commit: ${{ github.SHA }})
-
-          # Note: this is prefixed to the "Terraform Working Directory" in the remote workspace settings.
-          directory: ./ops/terraform/
         id: gh-actions-demo
